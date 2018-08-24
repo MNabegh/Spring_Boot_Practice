@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;Dockerfile&apos; to &apos;gs-accessing-data-mongodb-complete&apos;&#x0A;- Original project: &apos;spring_consuming_kafka&apos;&#x0A;- Destination element: &apos;gs-accessing-data-mongodb-complete&apos;&#x0A;- Original element: &apos;Dockerfile&apos;" description="Copy file" destination="=gs-accessing-data-mongodb-complete" element1="Dockerfile" files="1" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1533814179015" units="0" version="1.0"/>
+</session>

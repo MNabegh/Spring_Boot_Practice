@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aop-reference-model>
+<aop-project name="gs-spring-boot-docker-complete"/>
+<aop-project name="InheritanceTutorial"/>
+<aop-project name="InheritanceTutorial-1"/>
+<aop-project name="spring_consuming_kafka"/>
+<aop-project name="spring_communication_test2"/>
+<aop-project name="Transaction-Tutorial"/>
+<aop-project name="gs-spring-boot-docker-initial"/>
+<aop-project name="gs-accessing-data-mongodb-complete"/>
+</aop-reference-model>

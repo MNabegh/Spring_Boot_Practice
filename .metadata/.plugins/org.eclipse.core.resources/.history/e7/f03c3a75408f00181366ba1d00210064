@@ -1,0 +1,47 @@
+package com.tutorialspoint;
+
+import javax.sql.DataSource;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.EnableAspectJAutoProxy;
+import org.springframework.context.annotation.PropertySource;
+import org.springframework.core.env.Environment;
+import org.springframework.jdbc.datasource.DriverManagerDataSource;
+
+@Configuration
+@EnableAspectJAutoProxy
+@ComponentScan
+@PropertySource(value = { "classpath:application.properties" })
+public class AspectsConfig 
+{
+	@Autowired
+    private Environment env;
+	
+	@Bean(name = "student")
+	public Student student()
+	{
+		Student student = new Student();
+		student.setName("Zara");
+		student.setAge(11);
+		return student;
+	}
+	
+	@Bean
+    public DataSource dataSource() {
+        DriverManagerDataSource dataSource = new DriverManagerDataSource();
+        dataSource.setDriverClassName(env.getRequiredProperty("jdbc.driverClassName"));
+        dataSource.setUrl(env.getRequiredProperty("jdbc.url"));
+        dataSource.setUsername(env.getRequiredProperty("jdbc.username"));
+        dataSource.setPassword(env.getRequiredProperty("jdbc.password"));
+        return dataSource;
+    }
+	
+	@Bean
+    public StudentJDBCTemplate studentJDBCTemplate(DataSource dataSource) {
+        StudentJDBCTemplate jdbcTemplate = new StudentJDBCTemplate(dataSource);
+        return jdbcTemplate;
+    }
+}
